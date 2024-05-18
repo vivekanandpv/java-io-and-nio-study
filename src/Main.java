@@ -13,6 +13,8 @@ public class Main {
         //  Character-based IO has Reader and Writer
         //  Binary-based IO has InputStream and OutputStream
         //  This further is enhanced by several adapter decorators such as BufferedReader and like
+
+        //  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html
         readUsingReader();
         writeUsingWriter();
     }
