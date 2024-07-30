@@ -36,9 +36,9 @@ public class Main {
     static void readAndStream() {
         try {
             //  Since readAllLines returns List<String>,
-            //  it can be combined with stream processing capabilities
-            Files.readAllLines(Path.of("sample.txt"))
-                    .stream()
+            //  it can be combined with stream processing capabilities. But the API is eager.
+            //  For lazy reading using the stream, use lines(...)
+            Files.lines(Path.of("sample.txt"))
                     .map(String::toUpperCase)
                     .forEach(System.out::println);
         } catch (IOException e) {
