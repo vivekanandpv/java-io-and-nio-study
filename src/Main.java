@@ -15,7 +15,7 @@ public class Main {
         //  This further is enhanced by several adapter decorators such as BufferedReader and like
 
         //  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html
-        readUsingReader();
+//        readUsingReader();
         writeUsingWriter();
     }
 
@@ -54,10 +54,10 @@ public class Main {
         //  Flush: If the stream has saved any characters from the various write() methods
         //  in a buffer, write them immediately to their intended destination.
         try (Writer writer = new BufferedWriter(new FileWriter(filePath.toFile()))) {
-            String message = "Hey there!";
+            String message = "Will this be appended?";
 
             //  If the file exists, writer.write(...) overwrites
-            //  Use writer.append(...) if you want to append the content
+            //  For appending, the FileReader needs to be provided with true flag as in new FileWriter(filePath.toFile(), true)
             writer.write(message);
             //  also possible, albeit low-level
             //  writer.write(message.toCharArray());
